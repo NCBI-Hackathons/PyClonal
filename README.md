@@ -30,3 +30,15 @@ A Jupyter Notebook to analyze T-cell Receptor Sequencing
 -ImmuneDB -http://immunedb.com/
 
 -TraCeR -https://github.com/teichlab/tracer
+
+# TODO
+
+## Data parsing
+
+Formats:
+- ImmuneDB
+- Mixxer
+- VDJtools
+- SQL database?
+  - database schema
+  - database engine
