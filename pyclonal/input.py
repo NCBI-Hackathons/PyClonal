@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 import sys
 
@@ -14,11 +15,13 @@ def detectFileFormat(filename):
     detect_columns = {
             "mixcr": ["clonalSequenceQuality", "minQualFR1", "allDAlignments"],
             "changeo": ["SEQUENCE_ID", "JUNCTION_LENGTH", "CLONE_CDR3_AA"],
+            "vdjtools": ["frequency", "CDR3nt", "CDR3aa"],
+            "immunoseq": ["aminoAcid", "frequencyCount", "cdr3Length"],
     }
 
     for type, column_names in detect_columns.items():
         if all([column_name in first_line for column_name in column_names]):
-            print "%s looks like a %s file" % (filename, type)
+            print("%s looks like a %s file" % (filename, type))
             return type
 
     raise Exception("Unable to detect format of %s" % filename)
@@ -77,9 +80,37 @@ class ChangeoParser(object):
     def getCount(self, row):
         return row.DUPCOUNT
 
+class VDJToolsParser:
+    def __init__(self, filename):
+        self.sample = os.path.splitext(os.path.basename(f))[0]
+
+    def getSample(self, row):
+        return self.sample
+
+    def getSequence(self, row):
+        return self.CDR3aa
+
+    def getCount(self, row):
+        return self.count
+
+class ImmunoSeqParser:
+    def __init__(self, filename):
+        self.sample = os.path.splitext(os.path.basename(f))[0]
+
+    def getSample(self, row):
+        return self.sample
+
+    def getSequence(self, row):
+        return self.aminoAcid
+
+    def getCount(self, row):
+        return self.count
+
 PARSERS = {
         'changeo': ChangeoParser,
         'mixcr': MixcrParser,
+        'vdjtools': VDJToolsParser,
+        'immunoseq': ImmunoSeqParser,
         }
 
 
@@ -124,12 +155,12 @@ def parseFile(filename, sequence_indices=None, samples=None, format=None):
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        print "Usage: python %s FILES+" % sys.argv[0]
+        print("Usage: python %s FILES+" % sys.argv[0])
         sys.exit(1)
 
     samples_df, sequences_df = combineFiles(sys.argv[1:])
 
-    print samples_df
+    print(samples_df)
 
     samples_df.to_csv("samples.tsv", sep="\t")
     sequences_df.to_csv("sequences.tsv", sep="\t")
