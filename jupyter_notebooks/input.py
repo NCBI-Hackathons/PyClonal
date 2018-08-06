@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import os
 import sys
 
@@ -18,7 +20,7 @@ def detectFileFormat(filename):
 
     for type, column_names in detect_columns.items():
         if all([column_name in first_line for column_name in column_names]):
-            print "%s looks like a %s file" % (filename, type)
+            print("%s looks like a %s file" % (filename, type))
             return type
 
     raise Exception("Unable to detect format of %s" % filename)
@@ -124,12 +126,12 @@ def parseFile(filename, sequence_indices=None, samples=None, format=None):
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        print "Usage: python %s FILES+" % sys.argv[0]
+        print("Usage: python %s FILES+" % sys.argv[0])
         sys.exit(1)
 
     samples_df, sequences_df = combineFiles(sys.argv[1:])
 
-    print samples_df
+    print(samples_df)
 
     samples_df.to_csv("samples.tsv", sep="\t")
     sequences_df.to_csv("sequences.tsv", sep="\t")
