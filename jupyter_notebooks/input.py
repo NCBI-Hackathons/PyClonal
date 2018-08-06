@@ -16,6 +16,7 @@ def detectFileFormat(filename):
     detect_columns = {
             "mixcr": ["clonalSequenceQuality", "minQualFR1", "allDAlignments"],
             "changeo": ["SEQUENCE_ID", "JUNCTION_LENGTH", "CLONE_CDR3_AA"],
+            "mitcr": ["Read count", "CDR3 amino acid sequence", "V segments"],
     }
 
     for type, column_names in detect_columns.items():
@@ -66,6 +67,19 @@ class MixcrParser(object):
     def getCount(self, row):
         return row.cloneCount
 
+class MitcrParser(object):
+    def __init__(self, filename):
+        self.sample = os.path.basename(filename).rsplit('.', 1)[0]
+
+    def getSample(self, row):
+        return self.sample
+
+    def getSequence(self, row):
+        return row.CDR3_amino_acid_sequence
+
+    def getCount(self, row):
+        return row.Read_count
+
 class ChangeoParser(object):
     def __init__(self, filename):
         pass
@@ -82,6 +96,7 @@ class ChangeoParser(object):
 PARSERS = {
         'changeo': ChangeoParser,
         'mixcr': MixcrParser,
+        'mitcr': MitcrParser,
         }
 
 
@@ -107,6 +122,9 @@ def parseFile(filename, sequence_indices=None, samples=None, format=None):
 
 
     df = pd.read_table(filename)
+
+    # Map column names to ones that can be accessed from Python:
+    df.columns = [c.replace(' ', '_') for c in df.columns]
 
     for row in df.itertuples():
         sample_name = parser.getSample(row)
