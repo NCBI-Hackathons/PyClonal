@@ -38,7 +38,7 @@ setup(
     # numpy is here to make installing easier... Needs to be at the
     # last position, as that's the first installed with
     # "python setup.py install"
-    install_requires = ['pandas', 'plotly', 'jupyter'],
+    install_requires = ['pandas', 'plotly', 'jupyter', 'scipy', 'seaborn'],
 
     classifiers=['Intended Audience :: Science/Research',
                  'Programming Language :: Python',
