@@ -11,7 +11,7 @@ class BaseParser:
             'changeo': ('DUPCOUNT', 'CLONE_CDR3_AA', 'SAMPLE'),
             'vdjtools': ('count', 'cdr3aa', None),
             'mitcr': ('Read_count', 'CDR3_amino_acid_sequence', None),
-            'immunoseq': ('count', 'aminoAcid', None)
+            'immunoseq': ('count (templates/reads)', 'aminoAcid', None)
             }
 
     def __init__(self, filename):
@@ -107,7 +107,7 @@ def parseFile(filename, sequence_indices=None, samples=None, format=None):
     df = pd.read_table(filename)
 
     # Map column names to ones that can be accessed from Python:
-    df.columns = [c.replace(' ', '_') for c in df.columns]
+    # df.columns = [c.replace(' ', '_') for c in df.columns]
 
     for _,row in df.iterrows():
         sample_name = parser.getSample(row)

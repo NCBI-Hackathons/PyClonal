@@ -31,6 +31,36 @@ Background
    analyses are all in different locations and not easy to access! We
    are solving that problem here.
 
+Installation
+------------
+
+Dependencies: ``pandas``, ``jupyter``, ``plotly``
+
+For now the recommended way to install is using ``pipenv``:
+
+-  install ``pipenv`` (`installation
+   instructions <https://docs.pipenv.org/install/>`__)
+-  clone ``PyClonal`` repo:
+
+   ::
+
+       $ git clone https://github.com/NCBI-Hackathons/PyClonal.git
+
+-  create virtual environment inside ``PyClonal`` directory
+
+   ::
+
+       $ cd PyClonal
+       $ pipenv --three
+
+-  activate virtualenv and install ``PyClonal`` (this will install all
+   necessary dependencies)
+
+   ::
+
+       $ pipenv shell
+       $ pip install -e .
+
 Resources and Existing TCR tools to gather from:
 ------------------------------------------------
 
