@@ -30,7 +30,7 @@ setup(
     name="PyCLonal",
     version=extract_version(),
     author="NCBI Hackathon",
-    author_email="",
+    author_email="ilya.shamovsky@gmail.com",
     url="https://github.com/NCBI-Hackathons/PyClonal.git",
     license="MIT",
     packages=find_packages(),
@@ -42,6 +42,8 @@ setup(
     # numpy is here to make installing easier... Needs to be at the
     # last position, as that's the first installed with
     # "python setup.py install"
+    install_requires = ['pandas', 'plotly', 'jupyter'],
+
     classifiers=['Intended Audience :: Science/Research',
                  'Programming Language :: Python',
                  'Topic :: Scientific/Engineering :: Bio-Informatics',
