@@ -38,6 +38,8 @@ For now the recommended way to install is using `pipenv`:
 
 ## Resources and Existing TCR tools to gather from:
 
+-VDJdb -https://vdjdb.cdr3.net/
+
 -VDJ tools -https://vdjtools-doc.readthedocs.io/en/master/
 
 -VDJviz: a versatile immune repertoire browser -https://vdjviz.cdr3.net/
