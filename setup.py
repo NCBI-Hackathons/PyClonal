@@ -23,7 +23,7 @@ def get_package_data():
         ]}
 
 setup(
-    name="PyCLonal",
+    name="PyClonal",
     version=extract_version(),
     author="NCBI Hackathon",
     author_email="ilya.shamovsky@gmail.com",
