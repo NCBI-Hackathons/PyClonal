@@ -35,6 +35,9 @@ For now the recommended way to install is using `pipenv`:
         $ pipenv shell
         $ pip install -e .
 
+- open jupyter notebook within that environment
+        
+         $ jupyter notebook
 
 ## Resources and Existing TCR tools to gather from:
 
