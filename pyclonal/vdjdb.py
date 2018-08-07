@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import os
 import sys
 
@@ -26,8 +28,6 @@ def findEpitopes(sequences):
     found_epitopes = []
     for row in sequences.itertuples():
         found_epitopes.append(epitopes.get(row.Sequence, ""))
-
-    print filter(bool, found_epitopes)
 
     return found_epitopes
 
