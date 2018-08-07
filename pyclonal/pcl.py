@@ -3,7 +3,7 @@
 import os
 import argparse
 import glob
-from pyclonal.io import combineFiles
+from .io import combineFiles
 
 def check_arg_len(kwargs, arg, length):
     if arg in kwargs and not len(kwargs[arg]) in (0, length):

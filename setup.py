@@ -32,6 +32,9 @@ setup(
     packages=find_packages(),
     package_dir={"pyclonal": "pyclonal"},
     package_data=get_package_data(),
+    entry_points={
+        'console_scripts': ['pcl=pyclonal.pcl:main'],
+        },
     description="A Jupyter Notebook pipeline to analyze T-cell Receptor Sequencing",
     # run pandoc --from=markdown --to=rst --output=README.rst README.md
     long_description=open("README.rst").read(),
@@ -51,6 +54,6 @@ setup(
                  'Programming Language :: Python :: 2',
                  'Programming Language :: Python :: 2.7',
                  'Programming Language :: Python :: 3',
-                 'Programming Language :: Python :: 3.4',
-                 'Programming Language :: Python :: 3.5'],
+                 'Programming Language :: Python :: 3.5',
+                 'Programming Language :: Python :: 3.6'],
     zip_safe=False)
