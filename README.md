@@ -5,6 +5,12 @@ A Jupyter Notebook to analyze T-cell Receptor Sequencing
 
 - Provide an interactive set of Jupyter notebooks for easily visualizing and analyzing TCR sequencing data using existing tools and methods.
 
+## Use cases
+
+* [Single cell](link to notebook)
+* [Overlap] (link to notebook)
+* [etc](link to notebook)
+
 ## Background
 
 - T cells are immune cells that recognize their targets through the T-cell receptor (TCR) - a complex of highly variable cell-surface proteins. Analyzing the TCR repertoire in humans or mouse models can help us understand the development of the immune system and progression of disease. 
