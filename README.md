@@ -57,7 +57,7 @@ To use from the command line, run `pcl.py` script:
               [-c [FORMAT_COLS [FORMAT_COLS ...]]] [-o OUTPUT_FILE]
               dir
 
-        A Jupyter notebook based framework to analyzi T-cell receptor sequencing data.
+        A Jupyter notebook based framework to analyze T-cell receptor sequencing data.
         Provide an interactive set of Jupyter notebooks for easily visualizing and
         analyzing TCR sequencing data using existing tools and methods.
 
