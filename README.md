@@ -40,7 +40,7 @@
              
  - Metadata
         [Example](https://github.com/NCBI-Hackathons/PyClonal/blob/master/sample_input_files/metadata_demo.csv)
- ([installation instructions](https://docs.pipenv.org/install/))     
+
 - the possible input data that works with this notebook are the following:
 - if your data is not in one of the above formats, you can use a custom format (see data input notebook)
 - 
