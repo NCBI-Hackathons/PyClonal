@@ -4,7 +4,7 @@ from __future__ import print_function
 import os
 import argparse
 import glob
-from .io import combineFiles
+from .io import combineFiles, FmtReader
 
 def check_arg_len(kwargs, arg, length):
     if arg in kwargs and not len(kwargs[arg]) in (0, length):
@@ -49,7 +49,7 @@ def main():
         fmt = fmt_cols = None
 
     reader = FmtReader(glob.glob(os.path.join(kwargs['dir'], kwargs['pattern'])), fmt, fmt_cols)
-    samples_df, seq_df = FmtReader.process_files()
+    samples_df, seq_df = reader.process_files()
 
     samplesout = os.path.join(kwargs['dir'], '{}_samples.csv'.format(kwargs['output_file']))
     seqout = os.path.join(kwargs['dir'], '{}_seq.csv'.format(kwargs['output_file']))
