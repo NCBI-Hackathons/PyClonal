@@ -13,7 +13,7 @@
 ![](Workflow2.png?raw=true)
 
 
-## Use cases
+## Use cases (links to Jupyter notebooks)
 
 * [Overlap](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap_Analysis.ipynb)
 * [Diversity](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Diversity_Analysis.ipynb)
