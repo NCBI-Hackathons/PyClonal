@@ -77,6 +77,35 @@ For now the recommended way to install is using `pipenv`. If you use `Anaconda` 
 
         $ pipenv shell
 
+## Alternate installation methods
+
+Older versions of Anaconda have issues running pipenv.  There are a few alternatives if you run into installation issues:
+
+- Update your version of Anaconda, and rerun the commands
+
+- Use a conda environment.  Replace the commands
+
+        $ pipenv --three
+        $ pipenv shell
+
+    with
+
+        $ conda create --name env python=3
+        $ source activate env
+
+- Skip creating an environment and install directly to your Anaconda distribution.  This may dirty your installation and isn't recommended, but you can simply remove the commands
+
+        $ pipenv --three
+        $ pipenv shell
+
+    And replace
+
+        $ pip install -e .
+
+    with
+
+        $ pip install -e . --user
+
 ## Usage
 
 To use from the command line, run `pcl.py` script:

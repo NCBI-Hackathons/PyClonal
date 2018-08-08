@@ -1,6 +1,13 @@
 import os
 from setuptools import find_packages, setup
 
+try:
+    from pypandoc import convert
+    read_md = lambda f: convert(f, 'rst')
+except ImportError:
+    print("warning: pypandoc module not found, could not convert Markdown to RST")
+    read_md = lambda f: open(f, 'r').read()
+
 
 def extract_version():
     """
@@ -37,7 +44,7 @@ setup(
         },
     description="A Jupyter Notebook pipeline to analyze T-cell Receptor Sequencing",
     # run pandoc --from=markdown --to=rst --output=README.rst README.md
-    long_description=open("README.rst").read(),
+    long_description=read_md('README.md'),
     # numpy is here to make installing easier... Needs to be at the
     # last position, as that's the first installed with
     # "python setup.py install"
