@@ -4,6 +4,9 @@ import pandas as pd
 
 from pyclonal import io
 
+def test_format_detect():
+    pass
+
 def runTests():
     samples, sequences = io.combineFiles(os.path.join(os.path.dirname(__file__), "input_test_data"), pattern="*.tsv")
 

@@ -1,3 +1,4 @@
+from __future__ import print_function
 import itertools
 import pandas as pd
 from scipy.spatial.distance import cosine, jaccard

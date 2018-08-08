@@ -1,3 +1,4 @@
+from __future__ import print_function
 import os
 from setuptools import find_packages, setup
 
