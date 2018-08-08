@@ -15,8 +15,8 @@
 
 ## Use cases
 
-* [Overlap](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap%20Analysis%20Demo.ipynb)
-* [Diversity](https://github.com/NCBI-Hckathons/PyClonal/blob/master/jupyter_notebooks/Diversity%20Analysis%20Demo.ipynb)
+* [Overlap](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap_Analysis.ipynb)
+* [Diversity](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Diversity_Analysis.ipynb)
 * [Public Database](In development...)
 * [Single cell](In development...)
 
