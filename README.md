@@ -21,10 +21,10 @@ A Jupyter Notebook to analyze T-cell Receptor Sequencing
 
 ## Installation
 
-Dependencies: `pandas`, `jupyter`, `plotly`
+Dependencies: `pandas`, `jupyter`, `plotly`, `scipy`
 
 
-For now the recommended way to install is using `pipenv`:
+For now the recommended way to install is using `pipenv`. If you use `Anaconda` python distribution make sure to upgrade it to the latest version.
 
 - install `pipenv` ([installation instructions](https://docs.pipenv.org/install/))
 - clone `PyClonal` repo:
