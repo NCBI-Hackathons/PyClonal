@@ -1,6 +1,8 @@
 # PyClonal
 A Jupyter Notebook to analyze T-cell Receptor Sequencing
 
+![alt text](https://github.com/NCBI-Hackathons/PyClonal/hack-day1.pdf)
+
 ## Goal
 
 - Provide an interactive set of Jupyter notebooks for easily visualizing and analyzing TCR sequencing data using existing tools and methods.
