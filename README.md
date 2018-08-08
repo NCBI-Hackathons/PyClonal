@@ -34,9 +34,7 @@
 - Notebooks have two input requirements:
 
      1. Sequence data files
-         
-         -the possible input data that works with this notebook are the following:  
-        ([Information on Input files]https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/data%20input.ipynb)
+        ([Information on Input files](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/data%20input.ipynb))
              
      2. Metadata
         ([Example of required Metadata file](https://github.com/NCBI-Hackathons/PyClonal/blob/master/sample_input_files/metadata_demo.csv))
