@@ -8,6 +8,8 @@
 
 ## What is it?
 
+- A program that inputs diverse file types from aligmnet softwares (ie. MIXCR, Changeo, and more) along with associated metadata for those files, and allows an analysis workflow.
+
 ![](Workflow.png?raw=true)
 
 
