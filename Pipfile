@@ -8,7 +8,6 @@ name = "pypi"
 [packages]
 pandas = '*'
 jupyter = '*'
-plotly = '*'
 seaborn = '*'
 scipy = '*'
 pyclonal = {path = ".", editable = true}
