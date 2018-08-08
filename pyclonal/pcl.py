@@ -47,8 +47,8 @@ def main():
     else:
         fmt = fmt_cols = None
 
-    samples_df, seq_df = combineFiles(glob.glob(os.path.join(kwargs['dir'],
-       kwargs['pattern'])), fmt, fmt_cols)
+    reader = FmtReader(glob.glob(os.path.join(kwargs['dir'], kwargs['pattern'])), fmt, fmt_cols)
+    samples_df, seq_df = FmtReader.process_files()
 
     samplesout = os.path.join(kwargs['dir'], '{}_samples.csv'.format(kwargs['output_file']))
     seqout = os.path.join(kwargs['dir'], '{}_seq.csv'.format(kwargs['output_file']))
