@@ -32,9 +32,14 @@
 # How to use
 
 - Make a directory where your data is
+- Notebooks have two input requirements:
+        1) input data files
+             the possible input data that works with this notebook are the following:   
+        2) metadata
+             
 - the possible input data that works with this notebook are the following:
 - if your data is not in one of the above formats, you can use a custom format (see data input notebook)
-- make a metadata file (see instructions for metadata file)
+- 
 - follow installation instructions below
 
 ## Installation
