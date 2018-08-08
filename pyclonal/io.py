@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 from .parser import BaseParser
 
@@ -13,7 +14,13 @@ class FmtReader:
         self.fmt = fmt
         self.fmt_cols = fmt_cols
 
-
+    def _detect_delim(self, filename):
+        ext = os.path.splitext(filename)[1].lower()
+        if ext == '.csv':
+            return ','
+        else:
+            return '\t'
+    
     def process_files(self):
         """
         Given a list of filenames, read and parse all of them.
@@ -59,8 +66,7 @@ class FmtReader:
             sequence_indices = {}
             samples = {}
 
-
-        df = pd.read_table(filename)
+        df = pd.read_table(filename, sep=self._detect_delim(filename))
 
         # Map column names to ones that can be accessed from Python:
         # df.columns = [c.replace(' ', '_') for c in df.columns]

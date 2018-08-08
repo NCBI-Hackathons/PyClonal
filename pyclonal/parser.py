@@ -7,6 +7,7 @@ import pandas as pd
 FORMATS = {
         'mixcr': ('cloneCount', 'aaSeqCDR3', None),
         'changeo': ('DUPCOUNT', 'CLONE_CDR3_AA', 'SAMPLE'),
+        'changeof': ('DUPCOUNT', 'CLONE_CDR3_AA', None),
         'vdjtools': ('count', 'cdr3aa', None),
         'mitcr': ('Read_count', 'CDR3_amino_acid_sequence', None),
         'immunoseq': ('count (templates/reads)', 'aminoAcid', None)
@@ -39,6 +40,7 @@ class BaseParser:
         fmt = self._detect_format(filename)
         self._filename = filename
         self.cnt_field, self.cdr3_field, self.sample = self._get_field_names(fmt)
+
 
     def _detect_format(self, filename):
         """
