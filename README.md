@@ -8,9 +8,9 @@
 
 ## What is it?
 
-- A program that inputs diverse file types from aligmnet softwares (ie. MIXCR, Changeo, and more) along with associated metadata for those files, and allows an analysis workflow.
+- A program that inputs diverse file types from alignment softwares (ie. MIXCR, Changeo, and more) along with associated metadata for those files, and allows an analysis workflow.
 
-![](Workflow.png?raw=true)
+![](Workflow2.png?raw=true)
 
 
 ## Use cases
