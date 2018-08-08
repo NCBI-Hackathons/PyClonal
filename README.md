@@ -1,6 +1,6 @@
 ![](PyClonal_Logo.png?raw=true)
 
-A Jupyter Notebook to analyze T-cell Receptor Sequencing
+#A Jupyter Notebook to analyze T-cell Receptor Sequencing
 
 ## Goal
 
