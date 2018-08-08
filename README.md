@@ -21,6 +21,8 @@ A Jupyter Notebook to analyze T-cell Receptor Sequencing
 
 - There has been a lot of development of methods for analyzing T-cell receptor data, a lot of which borrows from the field of ecology and associated diversity analyses. However, the tools developed for these analyses are all in different locations and not easy to access! We are solving that problem here.
 
+# How to use
+
 ## Installation
 
 Dependencies: `pandas`, `jupyter`, `plotly`, `scipy`, `seaborn`
