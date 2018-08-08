@@ -34,11 +34,11 @@
 - Make a directory where your data is
 - Notebooks have two input requirements:
 
-        1) Sequence data files
-   
-             -the possible input data that works with this notebook are the following:  
+     1. Sequence data files
+         
+         -the possible input data that works with this notebook are the following:  
              
- - Metadata
+     2. Metadata
         ([Example](https://github.com/NCBI-Hackathons/PyClonal/blob/master/sample_input_files/metadata_demo.csv))
 
 - the possible input data that works with this notebook are the following:
