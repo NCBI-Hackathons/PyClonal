@@ -65,11 +65,11 @@ class BaseParser:
     def getSample(self, row):
         if self.sample is None:
             return os.path.splitext(os.path.basename(self._filename))[0]
-        return row[self.sample]
+        return getattr(row, self.sample)
 
 
     def getSequence(self, row):
-        return row[self.cdr3_field]
+        return getattr(row, self.cdr3_field)
 
     def getCount(self, row):
-        return row[self.cnt_field]
+        return getattr(row, self.cnt_field)

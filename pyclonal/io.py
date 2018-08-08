@@ -81,7 +81,7 @@ class FmtReader:
 
         df = pd.read_table(filename, sep=self._detect_delim(filename))
 
-        for _,row in df.iterrows():
+        for row in df.itertuples():
             sample_name = parser.getSample(row)
             if sample_name not in samples:
                 samples[sample_name] = {"Sample": sample_name}
