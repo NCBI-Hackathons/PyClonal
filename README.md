@@ -31,7 +31,6 @@
 
 # How to use
 
-- Make a directory where your data is
 - Notebooks have two input requirements:
 
      1. Sequence data files
