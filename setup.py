@@ -25,8 +25,12 @@ def get_package_data():
     return {
         'pyclonal':
         [
-            "sample_input_files/*.tsv",
-            "sample_input_files/*.txt"
+            "jupyter_notebooks/*.ipynb",
+            "sample_input_files/*.csv",
+            "sample_input_files/Mixcr/*.txt",
+            "sample_input_files/changeo/*.tsv",
+            "sample_input_files/vdjtools/*.txt",
+            "sample_input_files/ImmunoSeq/*.tsv",
         ]}
 
 setup(
