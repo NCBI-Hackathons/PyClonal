@@ -6,21 +6,23 @@ import pandas as pd
 
 FORMATS = {
         'mixcr': ('cloneCount', 'aaSeqCDR3', None),
-        'changeo': ('DUPCOUNT', 'CLONE_CDR3_AA', 'SAMPLE'),
-        'changeof': ('DUPCOUNT', 'CLONE_CDR3_AA', None),
+        'changeo_with_sample': ('DUPCOUNT', 'CLONE_CDR3_AA', 'SAMPLE'),
+        'changeo': ('DUPCOUNT', 'CLONE_CDR3_AA', None),
         'vdjtools': ('count', 'cdr3aa', None),
         'mitcr': ('Read_count', 'CDR3_amino_acid_sequence', None),
         'immunoseq': ('count (templates/reads)', 'aminoAcid', None)
         }
 
 
-FMT_COLS = {
-        "mixcr": ["clonalSequenceQuality", "minQualFR1", "allDAlignments"],
-        "changeo": ["SEQUENCE_ID", "JUNCTION_LENGTH", "CLONE_CDR3_AA"],
-        "vdjtools": ["freq", "cdr3nt", "cdr3aa"],
-        "immunoseq": ["aminoAcid", "frequencyCount", "cdr3Length"],
-        "mitcr": ["Read count", "CDR3 amino acid sequence", "V segments"],
-        }
+FMT_COLS = (
+        ("mixcr", ["clonalSequenceQuality", "minQualFR1", "allDAlignments"]),
+        # "changeo_with_sample" needs to be checked before "changeo"
+        ("changeo_with_sample", ["SEQUENCE_ID", "JUNCTION_LENGTH", "CLONE_CDR3_AA", "SAMPLE"]),
+        ("changeo", ["SEQUENCE_ID", "JUNCTION_LENGTH", "CLONE_CDR3_AA"]),
+        ("vdjtools", ["freq", "cdr3nt", "cdr3aa"]),
+        ("immunoseq", ["aminoAcid", "frequencyCount", "cdr3Length"]),
+        ("mitcr", ["Read count", "CDR3 amino acid sequence", "V segments"]),
+    )
 
 
 class BaseParser:
@@ -50,7 +52,7 @@ class BaseParser:
         with open(filename, 'rt') as fh:
             first_line = next(fh)
 
-        for fmt, column_names in self.FMT_COLS.items():
+        for fmt, column_names in self.FMT_COLS:
             if all([column_name in first_line for column_name in column_names]):
                 print("%s looks like a %s file" % (filename, fmt))
                 return fmt
