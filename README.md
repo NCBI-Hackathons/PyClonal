@@ -83,6 +83,8 @@ Older versions of Anaconda have issues running pipenv.  There are a few alternat
 
 - Use a conda environment.  In the PyClonal directory:
 
+        $ git clone https://github.com/NCBI-Hackathons/PyClonal.git
+        $ cd PyClonal
         $ conda create --name env python=3
         $ source activate env
         $ pip install -e .
@@ -90,6 +92,8 @@ Older versions of Anaconda have issues running pipenv.  There are a few alternat
 
 - Easiest but least recommended method:
 
+        $ git clone https://github.com/NCBI-Hackathons/PyClonal.git
+        $ cd PyClonal
         $ pip install -e . --user
         $ jupyter notebook
 
