@@ -31,6 +31,12 @@
 
 # How to use
 
+- Make a directory where your data is
+- the possible input data that works with this notebook are the following:
+- if your data is not in one of the above formats, you can use a custom format (see data input notebook)
+- make a metadata file (see instructions for metadata file)
+- follow installation instructions below
+
 ## Installation
 
 Dependencies: `pandas`, `jupyter`, `scipy`, `seaborn`
