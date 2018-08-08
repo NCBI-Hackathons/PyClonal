@@ -100,6 +100,6 @@ class FmtReader:
 def combineFiles(datadir, pattern=None, fmt=None, fmt_cols=None):
     if pattern is None:
         pattern = '*.tsv'
-    filenames = glob.glob(os.path.join(datadir, pattern))
+    filenames = sorted(glob.glob(os.path.join(datadir, pattern)))
     reader = FmtReader(filenames, fmt, fmt_cols)
     return reader.process_files()
