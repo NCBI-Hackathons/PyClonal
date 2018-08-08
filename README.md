@@ -77,28 +77,17 @@ Older versions of Anaconda have issues running pipenv.  There are a few alternat
 
 - Update your version of Anaconda, and rerun the commands
 
-- Use a conda environment.  Replace the commands
-
-        $ pipenv --three
-        $ pipenv shell
-
-    with
+- Use a conda environment.  In the PyClonal directory:
 
         $ conda create --name env python=3
         $ source activate env
-
-- Skip creating an environment and install directly to your Anaconda distribution.  This may dirty your installation and isn't recommended, but you can simply remove the commands
-
-        $ pipenv --three
-        $ pipenv shell
-
-    And replace
-
         $ pip install -e .
+        $ jupyter notebook
 
-    with
+- Easiest but least recommended method:
 
         $ pip install -e . --user
+        $ jupyter notebook
 
 ## Usage
 
