@@ -64,6 +64,10 @@ For now the recommended way to install is using `pipenv`. If you use `Anaconda` 
 - open jupyter notebook within that environment
         
          $ jupyter notebook
+         
+- once the jupyter notebook browser launches as below, notebooks are in the jupyter_notebooks folder
+
+![](notebook_snapshot.png?raw=true)
 
 - to exit the environment type `exit`
 
