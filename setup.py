@@ -25,7 +25,7 @@ def get_package_data():
 setup(
     name="PyClonal",
     version=extract_version(),
-    author="NCBI Hackathon, Michelle Miron, Ilya Shamovsky , Britney Martinez, Filip Cvetkovski, Ben Busby, Avi, and Kevin",
+    author="NCBI Hackathon, Michelle Miron, Ilya Shamovsky , Britney Martinez, Filip Cvetkovski, Ben Busby, Kevin Modzelewski, and Avi",
     author_email="miron.michelle@gmail.com",
     url="https://github.com/NCBI-Hackathons/PyClonal.git",
     license="MIT",
@@ -41,7 +41,7 @@ setup(
     # numpy is here to make installing easier... Needs to be at the
     # last position, as that's the first installed with
     # "python setup.py install"
-    install_requires = ['pandas', 'plotly', 'jupyter', 'scipy', 'seaborn'],
+    install_requires = ['pandas', 'jupyter', 'scipy', 'seaborn'],
 
     classifiers=['Intended Audience :: Science/Research',
                  'Programming Language :: Python',
