@@ -6,6 +6,11 @@
 
 - Provide an interactive set of Jupyter notebooks for easily visualizing and analyzing TCR sequencing data using existing tools and methods.
 
+## What is it?
+
+![](Workflow.png?raw=true)
+
+
 ## Use cases
 
 * [Single cell](link to notebook)
