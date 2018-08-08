@@ -16,11 +16,23 @@ class FmtReader:
         self.fmt_cols = fmt_cols
 
     def _detect_delim(self, filename):
-        ext = os.path.splitext(filename)[1].lower()
-        if ext == '.csv':
+        '''
+        Simple auto-detection of deilimiter.
+        '''
+        # ext = os.path.splitext(filename)[1].lower()
+        # if ext == '.csv':
+        #     return ','
+        # else:
+        #     return '\t'
+        with open(filename, 'rt') as fh:
+            header = next(fh)
+
+        if len(header.strip().split(',')) > 3:
             return ','
-        else:
+        elif len(header.strip().split('\t')) > 3:
             return '\t'
+        else:
+            raise Exception("Unknown delimiter for file {}".format(filename))
     
     def process_files(self):
         """
@@ -68,9 +80,6 @@ class FmtReader:
             samples = {}
 
         df = pd.read_table(filename, sep=self._detect_delim(filename))
-
-        # Map column names to ones that can be accessed from Python:
-        # df.columns = [c.replace(' ', '_') for c in df.columns]
 
         for _,row in df.iterrows():
             sample_name = parser.getSample(row)
