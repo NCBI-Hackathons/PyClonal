@@ -6,11 +6,12 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-pandas
-jupyter
-plotly
-seaborn
-scipy
+pandas = '*'
+jupyter = '*'
+plotly = '*'
+seaborn = '*'
+scipy = '*'
+pyclonal = {path = ".", editable = true}
 
 [requires]
 python_version = "3.6"
