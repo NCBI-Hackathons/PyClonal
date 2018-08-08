@@ -5,6 +5,12 @@ A Jupyter Notebook to analyze T-cell Receptor Sequencing
 
 - Provide an interactive set of Jupyter notebooks for easily visualizing and analyzing TCR sequencing data using existing tools and methods.
 
+## Use cases
+
+* [Single cell](link to notebook)
+* [Overlap] (link to notebook)
+* [etc](link to notebook)
+
 ## Background
 
 - T cells are immune cells that recognize their targets through the T-cell receptor (TCR) - a complex of highly variable cell-surface proteins. Analyzing the TCR repertoire in humans or mouse models can help us understand the development of the immune system and progression of disease. 
@@ -38,6 +44,41 @@ For now the recommended way to install is using `pipenv`:
 - open jupyter notebook within that environment
         
          $ jupyter notebook
+
+- to exit the environment type `exit`
+
+
+## Usage
+
+To use from the command line, run `pcl.py` script:
+
+        $./pcl.py -h
+        usage: pcl.py [-h] [-p PATTERN] [-f [FORMAT [FORMAT ...]]] [-n FORMAT_NAME]
+              [-c [FORMAT_COLS [FORMAT_COLS ...]]] [-o OUTPUT_FILE]
+              dir
+
+        A Jupyter notebook based framework to analyze T-cell receptor sequencing data.
+        Provide an interactive set of Jupyter notebooks for easily visualizing and
+        analyzing TCR sequencing data using existing tools and methods.
+
+        positional arguments:
+        dir                   directory with data files
+
+        optional arguments:
+        -h, --help            show this help message and exit
+        -p PATTERN, --pattern PATTERN
+                                filename patterd (*.tsv)
+        -f [FORMAT [FORMAT ...]], --format [FORMAT [FORMAT ...]]
+                                custom format: names of columns to extract
+        -n FORMAT_NAME, --format_name FORMAT_NAME
+                                custom format name
+        -c [FORMAT_COLS [FORMAT_COLS ...]], --format_cols [FORMAT_COLS [FORMAT_COLS ...]]
+                                column to detect format
+        -o OUTPUT_FILE, --output_file OUTPUT_FILE
+                                output files basename
+
+For usage example in `jupyter notebook` see example notebook `data input.ipynb`
+in `jupyter_notebooks` directory.
 
 ## Resources and Existing TCR tools to gather from:
 
