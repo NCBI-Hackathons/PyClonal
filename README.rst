@@ -1,7 +1,8 @@
-PyClonal
-========
+.. figure:: PyClonal_Logo.png?raw=true
+   :alt: 
 
-A Jupyter Notebook to analyze T-cell Receptor Sequencing
+Jupyter Notebooks to analyze T-cell Receptor Sequencing
+=======================================================
 
 Goal
 ----
@@ -10,12 +11,23 @@ Goal
    visualizing and analyzing TCR sequencing data using existing tools
    and methods.
 
+What is it?
+-----------
+
+-  A program that inputs diverse file types from alignment softwares
+   (ie. MIXCR, Changeo, and more) along with associated metadata for
+   those files, and allows an analysis workflow.
+
+.. figure:: Workflow2.png?raw=true
+   :alt: 
+
 Use cases
 ---------
 
--  `Single cell <link%20to%20notebook>`__
--  [Overlap] (link to notebook)
--  `etc <link%20to%20notebook>`__
+-  `Overlap <https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap%20Analysis%20Demo.ipynb>`__
+-  `Diversity <https://github.com/NCBI-Hckathons/PyClonal/blob/master/jupyter_notebooks/Diversity%20Analysis%20Demo.ipynb>`__
+-  `Public Database <In%20development...>`__
+-  `Single cell <In%20development...>`__
 
 Background
 ----------
@@ -38,12 +50,17 @@ Background
    analyses are all in different locations and not easy to access! We
    are solving that problem here.
 
+How to use
+==========
+
 Installation
 ------------
 
-Dependencies: ``pandas``, ``jupyter``, ``plotly``
+Dependencies: ``pandas``, ``jupyter``, ``scipy``, ``seaborn``
 
-For now the recommended way to install is using ``pipenv``:
+For now the recommended way to install is using ``pipenv``. If you use
+``Anaconda`` python distribution make sure to upgrade it to the latest
+version.
 
 -  install ``pipenv`` (`installation
    instructions <https://docs.pipenv.org/install/>`__)
@@ -76,6 +93,12 @@ For now the recommended way to install is using ``pipenv``:
 
 -  to exit the environment type ``exit``
 
+-  to reopen the environment after it has been downloaded once
+
+   ::
+
+       $ pipenv shell
+
 Usage
 -----
 
@@ -88,7 +111,7 @@ To use from the command line, run ``pcl.py`` script:
               [-c [FORMAT_COLS [FORMAT_COLS ...]]] [-o OUTPUT_FILE]
               dir
 
-        A Jupyter notebook based framework to analyzi T-cell receptor sequencing data.
+        A Jupyter notebook based framework to analyze T-cell receptor sequencing data.
         Provide an interactive set of Jupyter notebooks for easily visualizing and
         analyzing TCR sequencing data using existing tools and methods.
 
