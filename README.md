@@ -15,8 +15,8 @@
 
 ## Use cases
 
-* [Overlap](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap%20Analysis%20Demo.ipynb)
-* [Diversity](https://github.com/NCBI-Hckathons/PyClonal/blob/master/jupyter_notebooks/Diversity%20Analysis%20Demo.ipynb)
+* [Overlap](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap_Analysis.ipynb)
+* [Diversity](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Diversity_Analysis.ipynb)
 * [Public Database](In development...)
 * [Single cell](In development...)
 
@@ -31,7 +31,6 @@
 
 # How to use
 
-- Make a directory where your data is
 - Notebooks have two input requirements:
 
      1. Sequence data files
@@ -77,6 +76,35 @@ For now the recommended way to install is using `pipenv`. If you use `Anaconda` 
 - to reopen the environment after it has been downloaded once
 
         $ pipenv shell
+
+## Alternate installation methods
+
+Older versions of Anaconda have issues running pipenv.  There are a few alternatives if you run into installation issues:
+
+- Update your version of Anaconda, and rerun the commands
+
+- Use a conda environment.  Replace the commands
+
+        $ pipenv --three
+        $ pipenv shell
+
+    with
+
+        $ conda create --name env python=3
+        $ source activate env
+
+- Skip creating an environment and install directly to your Anaconda distribution.  This may dirty your installation and isn't recommended, but you can simply remove the commands
+
+        $ pipenv --three
+        $ pipenv shell
+
+    And replace
+
+        $ pip install -e .
+
+    with
+
+        $ pip install -e . --user
 
 ## Usage
 
