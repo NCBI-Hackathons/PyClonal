@@ -25,7 +25,7 @@ def get_package_data():
 setup(
     name="PyClonal",
     version=extract_version(),
-    author="NCBI Hackathon, Michelle Miron, Ilya Shamovsky , Britney Martinez, Filip Cvetkovski, Ben Busby, Avi, and Kevin",
+    author="NCBI Hackathon, Michelle Miron, Ilya Shamovsky , Britney Martinez, Filip Cvetkovski, Ben Busby, Kevin Modzelewski, and Avi",
     author_email="miron.michelle@gmail.com",
     url="https://github.com/NCBI-Hackathons/PyClonal.git",
     license="MIT",
