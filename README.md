@@ -47,7 +47,7 @@ For now the recommended way to install is using `pipenv`:
 
 - to exit the environment type `exit`
 
--to reopen the environment after it has been downloaded once
+- to reopen the environment after it has been downloaded once
 
         $ pipenv shell
 
