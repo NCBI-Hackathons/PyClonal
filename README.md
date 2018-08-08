@@ -1,17 +1,25 @@
-# PyClonal
-A Jupyter Notebook to analyze T-cell Receptor Sequencing
+![](PyClonal_Logo.png?raw=true)
 
-![](image.jpg?raw=true)
+# Jupyter Notebooks to analyze T-cell Receptor Sequencing
 
 ## Goal
 
 - Provide an interactive set of Jupyter notebooks for easily visualizing and analyzing TCR sequencing data using existing tools and methods.
 
+## What is it?
+
+- A program that inputs diverse file types from alignment softwares (ie. MIXCR, Changeo, and more) along with associated metadata for those files, and allows an analysis workflow.
+
+![](Workflow2.png?raw=true)
+
+
 ## Use cases
 
-* [Single cell](link to notebook)
 * [Overlap](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap%20Analysis%20Demo.ipynb)
-* [etc](link to notebook)
+* [Diversity](https://github.com/NCBI-Hckathons/PyClonal/blob/master/jupyter_notebooks/Diversity%20Analysis%20Demo.ipynb)
+* [Public Database](In development...)
+* [Single cell](In development...)
+
 
 ## Background
 
@@ -20,6 +28,8 @@ A Jupyter Notebook to analyze T-cell Receptor Sequencing
 - There are a growing pool of biologists and clinicians that want to be able to analyze the mass amounts of data they are collecting, or that others have collected and published. These notebooks will provide a tool for this community to use and interact with T-cell receptor sequencing data.
 
 - There has been a lot of development of methods for analyzing T-cell receptor data, a lot of which borrows from the field of ecology and associated diversity analyses. However, the tools developed for these analyses are all in different locations and not easy to access! We are solving that problem here.
+
+# How to use
 
 ## Installation
 
