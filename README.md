@@ -94,7 +94,7 @@ Older versions of Anaconda have issues running pipenv.  There are a few alternat
 
         $ git clone https://github.com/NCBI-Hackathons/PyClonal.git
         $ cd PyClonal
-        $ pip install -e . --user
+        $ pip install -e .
         $ jupyter notebook
 
 ## Usage
