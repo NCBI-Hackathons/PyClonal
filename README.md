@@ -10,7 +10,7 @@
 
 - A program that inputs diverse file types from alignment softwares (ie. MIXCR, Changeo, and more) along with associated metadata for those files, and allows an analysis workflow.
 
-![](Workflow2.png?raw=true)
+![](Workflow3.png?raw=true)
 
 
 ## Use cases (links to Jupyter notebooks)
