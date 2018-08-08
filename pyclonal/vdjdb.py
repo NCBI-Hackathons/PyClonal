@@ -8,7 +8,7 @@ import pandas as pd
 """
 To download a new VDJdb database:
 Go to https://vdjdb.cdr3.net/search and select "Export as:" -> TSV
-And place the downloaded file at data/VDJdb.tsv
+And place the downloaded file at public_datasets/VDJdb.tsv
 """
 
 def findEpitopes(sequences):
@@ -16,14 +16,11 @@ def findEpitopes(sequences):
     sequences: a pandas dataframe containing columns "Index" and "Sequence"
     """
 
-    vdj_data = pd.read_table(os.path.join(os.path.dirname(__file__), "../data/VDJdb.tsv"))
+    vdj_data = pd.read_table(os.path.join(os.path.dirname(__file__), "../public_datasets/VDJdb.tsv"))
 
     epitopes = {}
     for row in vdj_data.itertuples():
         epitopes[row.CDR3] = row.Epitope
-
-    # print epitopes
-    # print vdj_data.loc[vdj_data.index.intersection(["CASSYSRTGSYEQYF", "CASSLGGRGRGTEAF"])]["Epitope"]
 
     found_epitopes = []
     for row in sequences.itertuples():
