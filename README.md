@@ -1,7 +1,7 @@
 # PyClonal
 A Jupyter Notebook to analyze T-cell Receptor Sequencing
 
-![](images/image.jpg?raw=true)
+![](image.jpg?raw=true)
 
 ![alt text](https://github.com/NCBI-Hackathons/PyClonal/image.jpg)
 
