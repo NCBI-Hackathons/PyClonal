@@ -1,4 +1,5 @@
 import os
+import glob
 import pandas as pd
 from .parser import BaseParser
 
@@ -87,6 +88,9 @@ class FmtReader:
 
         return sequence_indices, samples
 
-def combineFiles(filenames, fmt=None, fmt_cols=None):
+def combineFiles(datadir, pattern=None, fmt=None, fmt_cols=None):
+    if pattern is None:
+        pattern = '*.tsv'
+    filenames = glob.glob(os.path.join(datadir, pattern))
     reader = FmtReader(filenames, fmt, fmt_cols)
     return reader.process_files()
