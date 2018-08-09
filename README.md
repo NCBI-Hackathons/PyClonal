@@ -17,9 +17,6 @@
 
 * [Overlap](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Overlap_Analysis.ipynb)
 * [Diversity](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/Diversity_Analysis.ipynb)
-* [Public Database](In development...)
-* [Single cell](In development...)
-
 
 ## Background
 
@@ -33,11 +30,11 @@
 
 - Notebooks have two input requirements:
 
-     1. Sequence data files
-        ([Information on Input files](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/data%20input.ipynb))
+     1. Sequence data files. Multiple formats accepted.
+        ([Examples](https://github.com/NCBI-Hackathons/PyClonal/blob/master/jupyter_notebooks/data%20input.ipynb))
              
-     2. Metadata
-        ([Example of required Metadata file](https://github.com/NCBI-Hackathons/PyClonal/blob/master/sample_input_files/metadata_demo.csv))
+     2. Metadata.
+        ([Example](https://github.com/NCBI-Hackathons/PyClonal/blob/master/sample_input_files/metadata_demo.csv))
 
 ## Installation
 
