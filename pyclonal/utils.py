@@ -19,7 +19,7 @@ def distance(data, metadata, field=None, value=None, method='cosine'):
         return pd.DataFrame(res_df).fillna(1)
     elif method == 'jaccard':
         for l1, l2 in itertools.combinations(df.index, 2):
-            res_df.setdefault(l2, {})[l1] = res_df.setdefault(l1, {})[l2] = jaccard(
+            res_df.setdefault(l2, {})[l1] = res_df.setdefault(l1, {})[l2] = 1 - jaccard(
                 list(df.loc[l1].values),
                 list(df.loc[l2].values),
             )
