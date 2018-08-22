@@ -10,7 +10,8 @@ FORMATS = {
         'changeo': ('DUPCOUNT', 'CLONE_CDR3_AA', None),
         'vdjtools': ('count', 'cdr3aa', None),
         'mitcr': ('Read_count', 'CDR3_amino_acid_sequence', None),
-        'immunoseq': ('count (templates/reads)', 'aminoAcid', None)
+        'immunoseq': ('count (templates/reads)', 'aminoAcid', None),
+        'immuneDB_cloneoverlap': ('copies','clone_id','sample')
         }
 
 
@@ -22,6 +23,7 @@ FMT_COLS = (
         ("vdjtools", ["freq", "cdr3nt", "cdr3aa"]),
         ("immunoseq", ["aminoAcid", "frequencyCount", "cdr3Length"]),
         ("mitcr", ["Read count", "CDR3 amino acid sequence", "V segments"]),
+        ("immuneDB_cloneoverlap", ["copies","clone_id","sample"])
     )
 
 
