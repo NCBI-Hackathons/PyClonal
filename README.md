@@ -59,7 +59,7 @@ Dependencies: `pandas`, `jupyter`, `scipy`, `seaborn`
 
 - open jupyter notebook within that environment inside `jupyter notebook` directory
         
-         $ cd jupyter notebook      
+         $ cd jupyter_notebooks      
          $ jupyter notebook
          
 - once the jupyter notebook browser launches as below, notebooks are in the jupyter_notebooks folder
