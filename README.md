@@ -41,9 +41,8 @@
 Dependencies: `pandas`, `jupyter`, `scipy`, `seaborn`
 
 
-For now the recommended way to install is using `pipenv`. If you use `Anaconda` python distribution make sure to upgrade it to the latest version.
+- You need python3 in order to install and use this. So first make sure you have python3.
 
-- install `pipenv` ([installation instructions](https://docs.pipenv.org/install/))
 - clone `PyClonal` repo:
 
         $ git clone https://github.com/NCBI-Hackathons/PyClonal.git
@@ -51,15 +50,16 @@ For now the recommended way to install is using `pipenv`. If you use `Anaconda` 
 - create virtual environment inside `PyClonal` directory
 
         $ cd PyClonal
-        $ pipenv --three
+        $ python3 -m venv pyclonal
         
 - activate virtualenv and install `PyClonal` (this will install all necessary dependencies)
         
-        $ pipenv shell
+        $ source pyclonal/bin/activate
         $ pip install -e .
 
-- open jupyter notebook within that environment
+- open jupyter notebook within that environment inside `jupyter notebook` directory
         
+         $ cd jupyter notebook      
          $ jupyter notebook
          
 - once the jupyter notebook browser launches as below, notebooks are in the jupyter_notebooks folder
